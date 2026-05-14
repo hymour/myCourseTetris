@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://db3y5nul721sy"]
+
+[ext_resource type="Script" uid="uid://cs0urmrodrif4" path="res://mainLogic.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://bl2srk5lxvcv7" path="res://pause_screen.gd" id="2_u44n3"]
+[ext_resource type="FontFile" uid="uid://bido5qxoy38l0" path="res://sourceFiles/minecraftfont.ttf" id="2_xkndl"]
+
+[node name="Main" type="Node2D" unique_id=1592512220]
+script = ExtResource("1_wbfu4")
+
+[node name="Game Over Screen" type="CanvasLayer" parent="." unique_id=2140101178]
+
+[node name="Overlay" type="ColorRect" parent="Game Over Screen" unique_id=2125229274]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Strip" type="ColorRect" parent="Game Over Screen" unique_id=1320508036]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label Game Over" type="Label" parent="Game Over Screen/Strip" unique_id=1994616492]
+layout_mode = 0
+offset_top = 39.0
+offset_right = 40.0
+offset_bottom = 62.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Over Screen" unique_id=1177961997]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label Score" type="Label" parent="Game Over Screen/VBoxContainer" unique_id=711360149]
+layout_mode = 2
+
+[node name="Button Restart" type="Button" parent="Game Over Screen/VBoxContainer" unique_id=260897762]
+layout_mode = 2
+
+[node name="Button Main Menu" type="Button" parent="Game Over Screen/VBoxContainer" unique_id=1207784163]
+layout_mode = 2
+
+[node name="Pause Screen" type="CanvasLayer" parent="." unique_id=1964702467]
+process_mode = 3
+script = ExtResource("2_u44n3")
+
+[node name="Overlay" type="ColorRect" parent="Pause Screen" unique_id=1177112114]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause Screen" unique_id=1937600887]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button Resume" type="Button" parent="Pause Screen/VBoxContainer" unique_id=730248794]
+layout_mode = 2
+
+[node name="Button Main Menu" type="Button" parent="Pause Screen/VBoxContainer" unique_id=2112456364]
+layout_mode = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=573247986]
+offset_right = 50.0
+offset_bottom = 48.0
+color = Color(7.219613e-08, 0.22298664, 0.37295172, 1)
+
+[node name="Next Piece Background" type="ColorRect" parent="." unique_id=1205520529]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Preview Container" type="Node2D" parent="Next Piece Background" unique_id=1996262604]
+
+[node name="Score Background" type="ColorRect" parent="." unique_id=1467185381]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="Score Background" unique_id=881488463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xkndl")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level Background" type="ColorRect" parent="." unique_id=915991845]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelLabel" type="Label" parent="Level Background" unique_id=993215944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xkndl")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Field Background" type="ColorRect" parent="." unique_id=57612897]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Blocks Container" type="Node2D" parent="Field Background" unique_id=349839371]
+
+[node name="FallTimer" type="Timer" parent="." unique_id=1889476325]
+wait_time = 0.5
+autostart = true

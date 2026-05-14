@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://88dmj4gkqmnx"]
+
+[ext_resource type="Script" uid="uid://d35xp0jc62o22" path="res://main_menu_script.gd" id="1_i26rj"]
+
+[node name="Main Menu" type="Control" unique_id=1471685398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i26rj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=705399532]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Background" unique_id=501408569]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/CenterContainer" unique_id=94860335]
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="Background/CenterContainer/VBoxContainer" unique_id=105186920]
+layout_mode = 2
+
+[node name="HighScore" type="Label" parent="Background/CenterContainer/VBoxContainer" unique_id=1799972174]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Background/CenterContainer/VBoxContainer" unique_id=1344801174]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="Background/CenterContainer/VBoxContainer" unique_id=1053143908]
+layout_mode = 2
